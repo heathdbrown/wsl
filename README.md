@@ -28,3 +28,14 @@ wsl
 
 Source:
 https://itsfoss.com/reset-linux-password-wsl/
+
+## IPv4 and Internal Proxy Issues with apt
+
+```
+# /etc/apt/apt.conf.d/ipv4onlyforinternalproxy
+Acquire::ForceIPv4=true;
+```
+
+```
+Acquire::http::Proxy "http://proxy.server:80/";
+```

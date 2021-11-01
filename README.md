@@ -39,3 +39,7 @@ Acquire::ForceIPv4=true;
 ```
 Acquire::http::Proxy "http://proxy.server:80/";
 ```
+
+## Podman on WSL
+
+(Podman.md)

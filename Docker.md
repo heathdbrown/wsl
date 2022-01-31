@@ -8,7 +8,10 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   vi /etc/dnf/dnf.config
   proxy=http://proxy.proxy.com:80
   ```
-
+- install bind-utils for testing network configuration
+  ```bash
+  dnf install bind-utils
+  ```
 
 # References
 - [Docker on WSL](https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)

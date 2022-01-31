@@ -10,7 +10,13 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```
 - install bind-utils for testing network configuration
   ```bash
-  dnf install bind-utils
+  dnf install bind-utils  -yq
+  ```
+- install passwd and cracklib-dicts to create non-root user
+  ```bash
+  dnf install passwd cracklib-dicts -yq
+  adduser <username>
+  passwd <username>
   ```
 
 # References

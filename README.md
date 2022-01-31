@@ -42,5 +42,5 @@ Acquire::http::Proxy "http://proxy.server:80/";
 
 ## Podman on WSL
 
-[Podman.md](https://github.com/heathdbrown/wsl/blob/main/Podman.md)
-[Docker.md](https://github.com/heathdbrown/wsl/blob/main/Docker.md)
+- [Podman.md](https://github.com/heathdbrown/wsl/blob/main/Podman.md)
+- [Docker.md](https://github.com/heathdbrown/wsl/blob/main/Docker.md)

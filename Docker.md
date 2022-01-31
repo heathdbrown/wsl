@@ -15,7 +15,7 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
 - install passwd and cracklib-dicts to create non-root user
   ```bash
   dnf install passwd cracklib-dicts -yq
-  adduser <username>
+  useradd -G wheel <username>
   passwd <username>
   ```
 

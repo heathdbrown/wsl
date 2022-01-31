@@ -1,0 +1,8 @@
+# Docker on WSL
+Moving away from Docker Desktop on Windows to running Docker inside of WSL.
+
+
+# References
+- [Docker on WSL](https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
+- [Fedora install on WSL](https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26)
+- [Proxy Settings for Fedora](https://www.cyberciti.biz/faq/how-to-use-dnf-command-with-a-proxy-server-on-fedora/)

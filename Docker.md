@@ -56,6 +56,16 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
     "hosts": ["unix:///mnt/wsl/shared-docker/docker.sock"]
   }
   ```
+- If behind a proxy, set proxy vars in ~/.bashrc and load environment vars when starting dockerd
+   ```bash
+   # function setproxy is  in ~/.bashrc which sets http_proxy,  https_proxy, no_proxy
+   setproxy
+   sudo -E dockerd
+   ```
+ - in another session run docker client
+   ```bash
+   docker -H unix:///mnt/wsl/shared-docker/docker.sock run --rm hello-world
+   ```
   
 # Using Fedora rootfs you will need to make some adjustments
 

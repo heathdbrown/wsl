@@ -1,6 +1,8 @@
 # Docker on WSL
 Moving away from Docker Desktop on Windows to running Docker inside of WSL.
 
+Attempts at running an application in WLS on Docker described  https://github.com/heathdbrown/research/blob/main/awx-in-docker/README.md
+
 # Using Ubuntu 20.04
 - cleanup packages
   ```bash

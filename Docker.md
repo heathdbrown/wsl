@@ -32,6 +32,31 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```bash
   sudo usermod -aG docker $USER
   ```
+- Steps for groups so the socket is shared
+  > read the references section for installing docker in WSL
+  ```bash
+  # view group ids
+  getent group | cut -d: -f3 | grep -E '^[0-9]{4}' | sort -g
+  # check for id you want to use is free
+  getent group | grep 36257 || echo "Yes, that ID is free"
+  # modify group with no groupmod 
+  # sudo sed -i -e 's/^\(docker:x\):[^:]\+/\1:36257/' /etc/group
+  # modify group with groupmod
+  sudo groupmod -g 36257 docker
+  ```
+- Configure dockerd
+  ```bash
+  DOCKER_DIR=/mnt/wsl/shared-docker
+  mkdir -pm o=,ug=rwx "$DOCKER_DIR"
+  chgrp docker "$DOCKER_DIR"
+  ```
+-  Create /etc/docker/daemon.json
+  ```json
+  {
+    "hosts": ["unix:///mnt/wsl/shared-docker/docker.sock"]
+  }
+  ```
+  
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

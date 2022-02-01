@@ -28,6 +28,10 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```bash
   sudo apt install docker-ce docker-ce-cli containerd.io -yq
   ```
+- Add user to docker group
+  ```bash
+  sudo usermod -aG docker $USER
+  ```
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

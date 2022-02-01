@@ -24,6 +24,10 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   echo "deb [arch=amd64] https://download.docker.com/linux/${ID} ${VERSION_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/docker.list
   sudo apt update
   ```
+- Install docker
+  ```bash
+  sudo apt install docker-ce docker-ce-cli containerd.io -yq
+  ```
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

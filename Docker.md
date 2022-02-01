@@ -122,7 +122,10 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```
 - start dockerd
   ```bash
-   sudo dockerd
+   # set proxy if needed and run with env  vars
+   # setproxy is a function in .bashrc that sets http_proxy, https_proxy, and no_proxy
+   setproxy
+   sudo -E dockerd
   ```
  - Run docker
    ```

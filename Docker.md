@@ -15,7 +15,10 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```bash
   source /etc/os-release
   ```
-  
+- download and install repo
+  ```
+  curl -fsSL https://download.docker.com/linux/${ID}/gpg | sudo apt-key add -
+  ```
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

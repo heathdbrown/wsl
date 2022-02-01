@@ -18,6 +18,11 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   useradd -G wheel <username>
   passwd <username>
   ```
+-  Add repo if using fedora
+  ```
+  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+  ```
 - Configure dockerd
   ```bash
   DOCKER_DIR=/mnt/wsl/shared-docker

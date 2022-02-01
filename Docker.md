@@ -11,6 +11,11 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
   ```bash
   sudo apt install --no-install-recommends apt-transport-https ca-certificates curl gnupg2 -yq
   ```
+- source /etc/os-release
+  ```bash
+  source /etc/os-release
+  ```
+  
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

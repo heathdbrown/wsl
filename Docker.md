@@ -1,6 +1,12 @@
 # Docker on WSL
 Moving away from Docker Desktop on Windows to running Docker inside of WSL.
 
+# Using Ubuntu 20.04
+- cleanup packages
+  ```bash
+  sudo apt remove docker docker-engine docker.io containerd runc
+  ```
+
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf

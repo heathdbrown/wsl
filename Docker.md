@@ -66,7 +66,7 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
    ```bash
    docker -H unix:///mnt/wsl/shared-docker/docker.sock run --rm hello-world
    ```
-  
+   
 # Using Fedora rootfs you will need to make some adjustments
 
 - proxy support in  /etc/dns/dnf.conf
@@ -131,6 +131,37 @@ Moving away from Docker Desktop on Windows to running Docker inside of WSL.
    ```
    docker -H unix:///mnt/wsl/shared-docker/docker.sock run --rm hello-world
    ```
+# Optional items to make life easier
+> Most of these items are covered in Docker on WSL in the References section.
+
+## Passwordless for dockerd startup and Environment passing
+To make life easier, NOT more secure, we can allow the dockerd to be issued with NOPASSWD and with SETENV.
+
+The SETENV is needed to allow for `sudo -E` to be allowed to pass the users local environment variables to root, which is where we set the proxy settings.
+
+```bash
+sudo visdo
+# Add line
+%docker ALL=(ALL)  NOPASSWD:SETENV: /usr/bin/dockerd
+```
+
+## Setup easy aliases
+
+```bash
+# Verify that ~/.bashrc or ~/.profile loads in ~/.bash_aliases if seen
+ grep -n aliases ~/.bashrc ~/.profile
+/home/$USER/.bashrc:75:# enable color support of ls and also add handy aliases
+/home/$USER/.bashrc:90:# some more ls aliases
+/home/$USER/.bashrc:101:# ~/.bash_aliases, instead of adding them here directly.
+/home/$USER/.bashrc:104:if [ -f ~/.bash_aliases ]; then
+/home/$USER/.bashrc:105:    . ~/.bash_aliases
+# Edit and add aliases
+vim ~/.bash_alaises
+# aliases
+alias dockerdup='sudo -E dockerd'
+alias dockerc='docker -H unix:///mnt/wsl/shared-docker/docker.sock'
+```
+
 # References
 - [Docker on WSL](https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
 - [Fedora install on WSL](https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26)

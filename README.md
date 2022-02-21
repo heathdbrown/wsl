@@ -44,6 +44,7 @@ Acquire::http::Proxy "http://proxy.server:80/";
 
 - Where $VPN is your VPN vendor or implementation
 - May need to run this every time you connect 
+- Must be admin to run
 
 ```Powershell
 Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "$VPN"} | Set-NetIPInterface -InterfaceMetric 6000

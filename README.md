@@ -40,6 +40,15 @@ Acquire::ForceIPv4=true;
 Acquire::http::Proxy "http://proxy.server:80/";
 ```
 
+## WSL on a Laptop with VPN
+
+- Where $VPN is your VPN vendor or implementation
+- May need to run this every time you connect 
+
+```Powershell
+Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "$VPN"} | Set-NetIPInterface -InterfaceMetric 6000
+```
+
 ## Podman on WSL
 
 - [Podman.md](https://github.com/heathdbrown/wsl/blob/main/Podman.md)

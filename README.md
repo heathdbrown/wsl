@@ -50,6 +50,8 @@ Acquire::http::Proxy "http://proxy.server:80/";
 Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "$VPN"} | Set-NetIPInterface -InterfaceMetric 6000
 ```
 
+- [Cisco AnyConnect VPN Work Around](https://gist.github.com/machuu/7663aa653828d81efbc2aaad6e3b1431)
+
 ## Podman on WSL
 
 - [Podman.md](https://github.com/heathdbrown/wsl/blob/main/Podman.md)

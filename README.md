@@ -56,6 +56,8 @@ Acquire::http::Proxy "http://proxy.server:80/";
 - Must be admin to run
 
 ```Powershell
+$VPN="Cisco AnyConnect"
+Get-NetIPInterface -InterfaceAlias "vEthernet (WSL)" | Set-NetIPInterface -InterfaceMetric 1
 Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "$VPN"} | Set-NetIPInterface -InterfaceMetric 6000
 ```
 

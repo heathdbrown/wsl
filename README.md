@@ -49,7 +49,7 @@ Acquire::ForceIPv4=true;
 Acquire::http::Proxy "http://proxy.server:80/";
 ```
 
-## WSL on a Laptop with VPN
+## WSL2 on a Laptop with VPN
 
 - Where $VPN is your VPN vendor or implementation
 - May need to run this every time you connect 

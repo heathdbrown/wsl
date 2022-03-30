@@ -1,6 +1,15 @@
 # wsl
 Windows Subsystem for Linux items I need to remember
 
+## Commands to Remember
+- wsl --list --verbose # list wsl distros
+- wsl --set-version <WSL Distro from --list> 1 # sets version to 1
+- wsl --install
+- wsl --update
+- wsl --shutdown
+- wsl --set-default-version 2
+- wsl -d <Distro>
+
 ## Password Reset if you don't remember your default user password
 
 Basically, reset your WSL Linux distro to set your default-user to root.

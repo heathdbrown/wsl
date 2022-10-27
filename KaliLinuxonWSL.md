@@ -22,6 +22,7 @@ wsl -d kali-linux -u root
 - 
 ```bash
 cd /tmp/
+apt -y download libcrypt1
 dpkg-deb -x libcrypt1_1%3a4.4.28-2_amd64.deb .
 cp -av lib/x86_64-linux-gnu/* /lib/x86_64-linux-gnu/
 apt -y --fix-broken install

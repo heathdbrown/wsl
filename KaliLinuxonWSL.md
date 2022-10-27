@@ -1,4 +1,8 @@
-# 
+# Kali Linux on WSL notes
+
+```bash
+wsl --install -d kali-linux
+```
 
 *Installs fine but may encounter the following when updating and upgrading the first time.
 
